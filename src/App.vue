@@ -8,17 +8,15 @@
 </template>
 
 <script>
-import AppHeader from '@/components/Header'
-export default {
-  name: 'App',
-  components: {
-    AppHeader,
-  }
-}
-</script>
+import AppHeader from "@/components/Header";
 
-<style>
-body {
-  
-}
-</style>
+export default {
+  name: "App",
+  components: {
+    AppHeader
+  },
+  created() {
+    this.$store.dispatch('initStocks');
+  }
+};
+</script>
