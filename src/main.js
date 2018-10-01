@@ -7,6 +7,10 @@ import store from './store'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+Vue.filter('currency', value => {
+  return '$' + value.toLocaleString();
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
